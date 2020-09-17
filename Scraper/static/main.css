@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body {
+   background: #4b5d67 !important;    
+}
+
+form {
+	text-align: center;
+	font-size: medium;
+	font-family: 'Space Mono', monospace;
+	transition-delay: 2.5s;
+}
+
+
+select, optgroup, option {
+	background: #87556f;
+	color: #ececec;
+	text-align: center;
+}
+
+optgroup[label] {
+	color: #ececec;
+}
+
+.custom-select {
+	position: relative;
+	margin-top: 20px;
+	display: inline-block;
+	background: #87556f;
+	background-size: 10px;
+	box-shadow: 0px 3px 8px #322f3d;
+	border-radius: 0.25em;
+	cursor: pointer;
+}
+
+.custom-select select {
+	background: none;
+	border: 0;
+	cursor: pointer;
+	outline: none;
+	padding: 10px 40px 10px 10px;
+}
+
+.chart {
+  width: 95%;
+  height: 70%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+*:focus {
+  outline: none;
+}
+
+
+
+/* 
+	------------------------- Hamburger menu -------------------------
+*/
+
+.content {
+	color: #87556f;
+	transition: 1s;
+  }
+  h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+  }
+  p {
+	padding: 3rem 5rem;
+	color: #ececec;
+  }
+
+  .form-fadeIn {
+	  transition: 0.5s ease-in;
+  }
+  
+  #side-bar{
+	  position: absolute;
+	  min-width: 230px;
+	  width: 20%;
+	  height: 100%;
+	  background: #87556f;
+	  left:-300px;
+	  transition: 0.3s ease-out;
+	  z-index: 4;
+	  font-family: 'Space Mono', monospace;
+  }
+  .toggle-btn{
+	  position: absolute;
+	  top: 30px;
+	  left: 310px;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+  }
+
+  .toggle-btn span{
+	width: 20px;
+	height: 5px;
+	border-radius:5px;
+	background: #87556f;
+	display: block;
+	margin-top:4px; 
+	transition: 0.3s ease;
+  }
+  
+  li{
+	  color: #ececec;
+	  list-style: none;
+	  font-size: 2rem;
+	  cursor: pointer;
+  }
+  
+  li:hover{
+	  color: #4b5d67;
+  }
+  
+  #side-bar.active{
+	  left:0;
+  }
+  #side-bar.active .toggle-btn {
+	top: 2.8rem;
+	left: 235px;
+  }
+  #side-bar.active span {
+	position: absolute;
+  }
+  #side-bar.active span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 0px;
+  }
+  #side-bar.active span:nth-child(2) {
+	opacity: 0;
+  }
+  #side-bar.active span:nth-child(3) {
+	transform: rotate(-45deg);
+  }
+  #side-bar.active ~ .content {
+	opacity: 0.3;
+  }
+  
