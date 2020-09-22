@@ -1,0 +1,123 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+body {
+   background: #4b5d67 !important;    
+   font-family: 'Space Mono', monospace;
+   overflow: hidden;
+}
+
+h2 {
+    color: #ececec;
+    text-align: center;
+}
+
+.content-box {
+    background-color: #87556f;
+    border-radius: .25em;
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 90%;
+    max-height: 90%;
+    overflow: auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3), 3px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.content {
+    border-top: 1px solid  #ececec;
+}
+
+.content p {
+    text-align: center;
+}
+
+/* 
+	------------------------- Hamburger menu -------------------------
+*/
+
+  h1 {
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;
+  }
+  p {
+	color: #ececec;
+  }
+
+  .form-fadeIn {
+	  transition: 0.5s ease-in;
+  }
+  
+  #side-bar{
+	  position: absolute;
+	  min-width: 120px;
+	  width: 15%;
+      height: 100%;
+      top: 0;
+	  background: #87556f;
+	  left:-300px;
+	  transition: 0.3s ease-out;
+	  z-index: 4;
+      font-family: 'Space Mono', monospace;
+      text-align: center;
+  }
+  .toggle-btn{
+	  position: absolute;
+	  top: 30px;
+	  left: 310px;
+	cursor: pointer;
+	height: 50px;
+	width: 50px;
+  }
+
+  .toggle-btn span{
+	width: 20px;
+	height: 5px;
+	border-radius:5px;
+	background: #87556f;
+	display: block;
+	margin-top:4px; 
+	transition: 0.3s ease;
+  }
+  
+  li{
+	  color: #ececec;
+	  list-style: none;
+	  font-size: 1.5rem;
+	  cursor: pointer;
+  }
+  
+  li:hover{
+	  color: #4b5d67;
+  }
+  
+  #side-bar.active{
+	  left:0;
+  }
+  #side-bar.active .toggle-btn {
+	top: 2.8rem;
+	left: 235px;
+  }
+  #side-bar.active span {
+	position: absolute;
+  }
+  #side-bar.active span:nth-child(1) {
+	transform: rotate(45deg);
+	top: 0px;
+  }
+  #side-bar.active span:nth-child(2) {
+	opacity: 0;
+  }
+  #side-bar.active span:nth-child(3) {
+	transform: rotate(-45deg);
+  }
+  #side-bar.active ~ .content {
+	opacity: 0.3;
+  }
+  
