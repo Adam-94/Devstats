@@ -30,7 +30,7 @@
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
 
-    <title>Devlang Stats</title>
+    <title>Devstats</title>
 
   </head>
   <body>
@@ -43,12 +43,11 @@
       </div>
   
       <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Services</li>
-        <li class="list">Contact</li>
+        <li><a href="{{ url_for('index') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('faq') }}">FAQ</a></li>
       </ul>
-    </div>  
+    </div>   
 
     <form class="forms">
       <div class="custom-select">
@@ -331,7 +330,13 @@
     </div>
 
 
+    <footer>
+      <p>Copyright &copy; 2020 Devstats, All Rights Reserved.</p>
+    </footer>
+
+
   <script src="/static/main.js"></script>
+  <script src="/static/sidebar.js"></script>
 
   </body>
 </html>
