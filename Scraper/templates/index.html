@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">  
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Description of the page less than 150 characters">
+    <meta name="HandheldFriendly" content="true">
+
+    <!-- Apple Touch Icon (at least 200x200px) -->
+    <link rel="apple-touch-icon" href="/custom-icon.png">
+
+    <!-- To run web application in full-screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    
+    <!-- Status Bar Style (see Supported Meta Tags below for available values) -->
+    <!-- Has no effect unless you have the previous meta tag -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/pure-min.css" integrity="sha384-cg6SkqEOCV1NbJoCu11+bm0NvBRc8IYLRGXkmNrqUBfTjmMYwNKPWBTIKyw9mHNJ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/purecss@2.0.3/build/grids-responsive-min.css">
+
+    <title>Devstats</title>
+
+  </head>
+  <body>
+
+    <div id="side-bar">
+    <div class="toggle-btn" id="toggle-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+  
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li class="list">Contact</li>
+      </ul>
+    </div>  
+
+    <form class="forms">
+      <div class="custom-select">
+      <select class="select" id="city_select">
+        <option value="">Choose a City</option>
+        <optgroup label="Argentina">
+          <option value="">Buenos Aires</option>
+        </optgroup>
+
+        <optgroup label="Australia">
+          <option value="">Brisbane</option>
+          <option value="">Perth</option>
+          <option value="">Sydney</option>
+        </optgroup>
+
+        <optgroup label="Austria">
+          <option value="">Vienna</option>
+          <option value="">Graz</option>
+        </optgroup>
+
+        <optgroup label="Belgium">
+          <option value="">Antwerp</option>
+          <option value="">Brussels</option>
+        </optgroup>
+
+        <optgroup label="Brazil">
+          <option value="">Rio de Janeiro</option>
+        </optgroup>
+
+        <optgroup label="Canada">
+          <option value="">Toronto</option>
+          <option value="">Vancouver</option>
+          <option value="">Calgary</option>
+        </optgroup>
+
+        <optgroup label="Chile">
+          <option value="">Santiago</option>
+          <option value="">Antofagasta</option>
+        </optgroup>
+
+        <optgroup label="Colombia">
+          <option value="">Bogota</option>
+        </optgroup>
+
+        <optgroup label="Costa Rica">
+          <option value="">San Jose</option>
+        </optgroup>
+
+        <optgroup label="Czech Republic">
+          <option value="">Prague</option>
+          <option value="">Brno</option>
+        </optgroup>
+
+        <optgroup label="Denmark">
+          <option value="">Copenhagen</option>
+          <option value="">Aarhus</option>
+        </optgroup>
+        
+        <optgroup label="Ecuador">
+          <option value="">Guayaquil</option>
+          <option value="">Quito</option>
+        </optgroup>
+
+        <optgroup label="Egypt">
+          <option value="">Cairo</option>
+          <option value="">Aswan</option>
+        </optgroup>
+
+        <optgroup label="Finland">
+          <option value="">Helsinki</option>
+          <option value="">Tampere</option>
+          <option value="">Oulu</option>
+        </optgroup>
+
+        <optgroup label="France">
+          <option value="">Paris</option>
+          <option value="">Marseille</option>
+          <option value="">Lyon</option>
+        </optgroup>
+
+        <optgroup label="Germany">
+          <option value="">Berlin</option>
+          <option value="">Hamburg</option>
+          <option value="">Munich</option>
+        </optgroup>
+
+        <optgroup label="Greece">
+          <option value="">Athens</option>
+          <option value="">Thessaloniki</option>
+        </optgroup>
+
+        <optgroup label="Hong Kong">
+          <option value="">Hong Kong</option>
+          <option value="">Kowloon</option>
+        </optgroup>
+
+        <optgroup label="Hungary">
+          <option value="">Budapest</option>
+          <option value="">Debrecen</option>
+        </optgroup>
+
+        <optgroup label="India">
+          <option value="">Jaipur</option>
+          <option value="">Bengaluru</option>
+          <option value="">Mumbai</option>
+        </optgroup>
+
+        <optgroup label="Indonesia">
+          <option value="">Jakarta</option>
+          <option value="">Bandung</option>
+        </optgroup>
+
+        <optgroup label="Ireland">
+          <option value="">Dublin</option>
+          <option value="">Cork</option>
+        </optgroup>
+
+        <optgroup label="Italy">
+          <option value="">Rome</option>
+          <option value="">Milan</option>
+        </optgroup>
+
+        <optgroup label="Japan">
+          <option value="">Fukuoka</option>
+          <option value="">Tokyo</option>
+          <option value="">Osaka</option>
+        </optgroup>
+
+        <optgroup label="Mexico">
+          <option value="">Guadalajara</option>
+          <option value="">Monterrey</option>
+        </optgroup>
+
+        <optgroup label="Netherlands">
+          <option value="">Amsterdam</option>
+          <option value="">Rotterdam</option>
+          <option value="">Eindhoven</option>
+        </optgroup>
+
+        <optgroup label="New Zealand">
+          <option value="">Auckland</option>
+          <option value="">Christchurch</option>
+          <option value="">Wellington</option>
+        </optgroup>
+
+        <optgroup label="Nigeria">
+          <option value="">Lagos</option>
+        </optgroup>
+
+        <optgroup label="Norway">
+          <option value="">Bergen</option>
+          <option value="">Oslo</option>
+        </optgroup>
+
+        <optgroup label="Pakistan">
+          <option value="">Karachi</option>
+          <option value="">Lahore</option>
+        </optgroup>
+
+        <optgroup label="Peru">
+          <option value="">Lima</option>
+        </optgroup>
+
+        <optgroup label="Philippines">
+          <option value="">Makati</option>
+          <option value="">Quezon</option>
+        </optgroup>
+
+        <optgroup label="Poland">
+          <option value="">Warsaw</option>
+          <option value="">Krakow</option>
+        </optgroup>
+
+        <optgroup label="Portugal">
+          <option value="">Lisbon</option>
+          <option value="">Porto</option>
+        </optgroup>
+
+        <optgroup label="Romania">
+          <option value="">Bucharest</option>
+          <option value="">Cluj</option>
+        </optgroup>
+        
+        <optgroup label="Russia">
+          <option value="">Moscow</option>
+        </optgroup>
+
+        <optgroup label="Singapore">
+          <option value="">Singapore</option>
+          <option value="">Woodlands</option>
+        </optgroup>
+
+        <optgroup label="South Africa">
+          <option value="">Cape Town</option>
+          <option value="">Johannesburg</option>
+        </optgroup>
+
+        <optgroup label="Spain">
+          <option value="">Barcelona</option>
+          <option value="">Madrid</option>
+          <option value="">Valencia</option>
+        </optgroup>
+
+        <optgroup label="Sweden">
+          <option value="">Gothenburg</option>
+          <option value="">Stockholm</option>
+        </optgroup>
+
+        <optgroup label="Switzerland">
+          <option value="">Geneva</option>
+          <option value="">Lausanne</option>
+          <option value="">Zurich</option>
+        </optgroup>
+
+        <optgroup label="Taiwan">
+          <option value="">Hsinchu</option>
+          <option value="">Taipei</option>
+        </optgroup>
+
+        <optgroup label="Thailand">
+          <option value="">Bangkok</option>
+          <option value="">Pattaya</option>
+        </optgroup>
+
+        <optgroup label="Turkey">
+          <option value="">Ankara</option>
+          <option value="">Instanbul</option>
+        </optgroup>
+
+        <optgroup label="Ukraine">
+          <option value="">Kyiv</option>
+          <option value="">Odesa</option>
+        </optgroup>
+
+        <optgroup label="United Arab Emirates">
+          <option value="">Abu Dhabi</option>
+          <option value="">Dubai</option>
+        </optgroup>
+
+        <optgroup label="United Kingdom">
+          <option value="">London</option>
+          <option value="">Cambridge</option>
+          <option value="">Manchester</option>
+          <option value="">Liverpool</option>
+          <option value="">Birmingham</option>
+          <option value="">Cardiff</option>
+          <option value="">Wrexham</option>
+          <option value="">Belfast</option>
+        </optgroup>
+
+        <optgroup label="United States">
+          <option value="">San Francisco</option>
+          <option value="">New York</option>
+          <option value="">Los Angeles</option>
+          <option value="">Boston</option>
+          <option value="">Austin</option>
+          <option value="">Washington D.C</option>
+        </optgroup>
+
+        <optgroup label="Vietnam">
+          <option value="">Ho Chi Minh City</option>
+          <option value="">Hanoi</option>
+        </optgroup>
+      </select>
+      </div>
+
+      <div class="custom-select">
+        <select class="select" id="stat_options">
+          <option value="">Choose statistics</option>
+          <option value="">Languages</option>
+          <option value="">Frameworks</option>
+          <option value="">Tools</option>
+        </select>
+      </div>
+    </form>
+
+
+    <div class="chart"> 
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2020 Devstats, All Rights Reserved.</p>
+    </footer>
+
+    <script src="/static/main.js"></script>
+
+  </body>
+</html>
