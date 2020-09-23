@@ -20,6 +20,15 @@ def logo():
       return send_from_directory(os.path.join(app.root_path, 'static'),
                                  'logo.png', mimetype='/home/adam/devstats/Scraper/static/logo.png')
 
+@app.route('/about')
+def about():
+      return render_template('about.html')
+
+@app.route('/faq')
+def faq():
+      return render_template('faq.html')
+
+
 @app.route('/city_selection', methods=['POST'])
 def get_city():
       if request.method == 'POST':
