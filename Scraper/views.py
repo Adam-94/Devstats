@@ -28,10 +28,6 @@ def about():
 def faq():
       return render_template('faq.html')
 
-@app.route('/contact')
-def contact():
-      return render_template('contact.html')
-
 
 @app.route('/city_selection', methods=['POST'])
 def get_city():

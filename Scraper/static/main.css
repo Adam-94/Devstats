@@ -2,17 +2,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 
 body {
-   background: #4b5d67 !important;    
+   background: #4b5d67 !important;  
+   font-family: 'Space Mono', monospace;  
 }
 
 form {
 	text-align: center;
 	font-size: medium;
-	font-family: 'Space Mono', monospace;
 	transition-delay: 2.5s;
 }
 
-
+a {
+	text-decoration: none;
+	color: #ececec;
+  }
+  
+  a:hover {
+	color: #4b5d67;
+  }
+  
 select, optgroup, option {
 	background: #87556f;
 	color: #ececec;
@@ -57,23 +65,26 @@ optgroup[label] {
   outline: none;
 }
 
+footer {
+	position: absolute;
+  	right: 0;bottom:0;left:0;
+   	width: 100%;
+   	text-align: center;
+	font-size: 12px;
+        color: hsl(357, 8%, 60%);
+}
 
 
 /* 
 	------------------------- Hamburger menu -------------------------
 */
 
-.content {
-	color: #87556f;
-	transition: 1s;
-  }
-  h1 {
+h1 {
 	text-align: center;
 	text-transform: uppercase;
 	font-size: 4rem;
   }
   p {
-	padding: 3rem 5rem;
 	color: #ececec;
   }
 
@@ -82,15 +93,17 @@ optgroup[label] {
   }
   
   #side-bar{
-	  position: absolute;
-	  min-width: 230px;
-	  width: 20%;
-	  height: 100%;
+    position: absolute;
+    min-width: 130px;
+	  width: 15%;
+      height: 100%;
+      top: 0;
 	  background: #87556f;
 	  left:-300px;
 	  transition: 0.3s ease-out;
 	  z-index: 4;
-	  font-family: 'Space Mono', monospace;
+      font-family: 'Space Mono', monospace;
+      text-align: center;
   }
   .toggle-btn{
 	  position: absolute;
@@ -114,7 +127,7 @@ optgroup[label] {
   li{
 	  color: #ececec;
 	  list-style: none;
-	  font-size: 2rem;
+	  font-size: 1.5rem;
 	  cursor: pointer;
   }
   
@@ -146,3 +159,39 @@ optgroup[label] {
 	opacity: 0.3;
   }
   
+
+  @media only screen and (min-device-width: 320px) and (max-device-width: 1136px) and (-webkit-min-device-pixel-ratio: 2) {
+	/* iPhone 5 only */
+	
+	.custom-select {
+		position: relative;
+		margin-top: 20px;
+		background: #87556f;
+		box-shadow: 0px 3px 8px #322f3d;
+		border-radius: 0.25em;
+		cursor: pointer;
+		width: 215px;
+
+	}
+	
+	.custom-select select {
+		background: none;
+		border: 0;
+		cursor: pointer;
+		outline: none;
+		padding: 5px 20px 5px 5px;
+		width: 215px;
+	}
+	
+	.chart {
+	  width: 60%;
+	  height: 50%;
+	  position: fixed;
+	  top: 0;
+	  right: 0;
+	  bottom: 0;
+	  left: 0;
+	  margin: auto;
+	}
+
+}
