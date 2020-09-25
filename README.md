@@ -1,7 +1,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/Adam-94/Devstats/blob/master/LICENSE)
-[![LinkedIn][linkedin-shield]][linkedin-url]
 
 
 
@@ -84,6 +83,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [stars-url]: https://github.com/adam-94/Devstats/stargazers
 [issues-shield]: https://img.shields.io/github/issues/adam-94/Devstats.svg?style=flat-square
 [issues-url]: https://github.com/adam-94/Devstats/issues
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://www.linkedin.com/in/adam-hughes-a2a1a115a
 [product-screenshot]: images/screenshot.png
