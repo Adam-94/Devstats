@@ -13,12 +13,12 @@ def index():
 @app.route('/favicon.ico')
 def favicon():
       return send_from_directory(os.path.join(app.root_path, 'static'),
-                                 'favicon.ico', mimetype='B:\\Desktop\\Programming\\Indeed Scraper V2\\Scraper\\static\\favicon.ico')
+                                 'favicon.ico', mimetype='/home/adam/Devstats/Scraper/static/favicon.ico')
 
 @app.route('/logo')
 def logo():
       return send_from_directory(os.path.join(app.root_path, 'static'),
-                                 'logo.png', mimetype='B:\\Desktop\\Programming\\Indeed Scraper V2\\Scraper\\static\\logo.png')
+                                 'logo.png', mimetype='/home/adam/devstats/Scraper/static/logo.png')
 
 @app.route('/about')
 def about():

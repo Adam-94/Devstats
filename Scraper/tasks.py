@@ -1,8 +1,8 @@
 import csv
 
-LANGUAGES = 'B:\\Desktop\\Programming\\Indeed Scraper V2\\Scraper\\languages.csv'
-FRAMEWORKS = 'B:\\Desktop\\Programming\\Indeed Scraper V2\\Scraper\\frameworks.csv'
-TOOLS = 'B:\\Desktop\\Programming\\Indeed Scraper V2\\Scraper\\tools.csv'
+LANGUAGES = '/home/adam/Devstats/Scraper/languages.csv'
+FRAMEWORKS = '/home/adam/Devstats/Scraper/frameworks.csv'
+TOOLS = '/home/adam/Devstats/Scraper/tools.csv'
 
 def get_statistics(stat_option, city):
     if stat_option == 'Languages':
